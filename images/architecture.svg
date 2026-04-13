@@ -1,0 +1,116 @@
+<svg width="900" height="460" viewBox="0 0 900 460" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .bg { fill: #162533; }
+      .box { fill: #1a1a2e; stroke: rgba(0,173,216,0.4); stroke-width: 1; rx: 10; }
+      .box-strong { stroke: rgba(0,173,216,0.9); }
+      .text-title { fill: #ffffff; font-family: Inter, sans-serif; font-weight: 600; font-size: 14px; }
+      .text-desc { fill: #8da0b3; font-family: Inter, sans-serif; font-size: 12px; }
+      .arrow { stroke: rgba(0,173,216,0.6); stroke-width: 1.5; fill: none; marker-end: url(#arrowhead); }
+      .arrow-dashed { stroke-dasharray: 4 3; }
+      .layer-line { stroke: rgba(0,173,216,0.4); stroke-width: 1; }
+      .layer-box { fill: #1a1a2e; stroke: rgba(0,173,216,0.3); stroke-width: 1; rx: 6; }
+      .layer-circle { fill: #00ADD8; }
+      .layer-num { fill: #0f1923; font-family: Inter, sans-serif; font-size: 11px; font-weight: 700; }
+      .layer-text { fill: #ffffff; font-family: Inter, sans-serif; font-size: 12px; font-weight: 600; }
+      .layer-desc { fill: #8da0b3; font-family: Inter, sans-serif; font-size: 11px; }
+      .section-label { fill: rgba(0,173,216,0.5); font-family: Inter, sans-serif; font-size: 10px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; }
+    </style>
+
+    <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <polygon points="0 0, 6 3, 0 6" fill="#00ADD8" opacity="0.7"></polygon>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="460" class="bg" rx="12"></rect>
+
+  <!-- Section label: Actors -->
+  <text x="310" y="60" text-anchor="middle" class="section-label">THE THREE ACTORS</text>
+
+  <!-- Section label: State Layers -->
+  <text x="740" y="60" text-anchor="middle" class="section-label">FOUR-LAYER STATE</text>
+
+  <!-- Divider line -->
+  <line x1="580" y1="75" x2="580" y2="420" stroke="rgba(0,173,216,0.12)" stroke-width="1"></line>
+
+  <!-- Main boxes -->
+  <!-- Controller -->
+  <rect x="60" y="100" width="160" height="80" class="box box-strong"></rect>
+  <text x="140" y="130" text-anchor="middle" class="text-title">Controller</text>
+  <text x="140" y="155" text-anchor="middle" class="text-desc">Decides</text>
+
+  <!-- Workflow Service -->
+  <rect x="230" y="100" width="160" height="80" class="box box-strong"></rect>
+  <text x="310" y="125" text-anchor="middle" class="text-title">Workflow</text>
+  <text x="310" y="145" text-anchor="middle" class="text-title">Service</text>
+  <text x="310" y="167" text-anchor="middle" class="text-desc">Coordinates</text>
+
+  <!-- Node Agent -->
+  <rect x="400" y="100" width="160" height="80" class="box box-strong"></rect>
+  <text x="480" y="130" text-anchor="middle" class="text-title">Node Agent</text>
+  <text x="480" y="155" text-anchor="middle" class="text-desc">Executes</text>
+
+  <!-- Arrows (forward solid) -->
+  <line x1="220" y1="130" x2="230" y2="130" class="arrow"></line>
+  <line x1="390" y1="130" x2="400" y2="130" class="arrow"></line>
+
+  <!-- Arrows (return dashed) -->
+  <line x1="230" y1="155" x2="220" y2="155" class="arrow arrow-dashed"></line>
+  <line x1="400" y1="155" x2="390" y2="155" class="arrow arrow-dashed"></line>
+
+  <!-- etcd -->
+  <rect x="60" y="260" width="160" height="60" class="box"></rect>
+  <text x="140" y="287" text-anchor="middle" class="text-title">etcd</text>
+  <text x="140" y="307" text-anchor="middle" class="text-desc">Source of Truth</text>
+
+  <!-- systemd -->
+  <rect x="400" y="260" width="160" height="60" class="box"></rect>
+  <text x="480" y="287" text-anchor="middle" class="text-title">systemd</text>
+  <text x="480" y="307" text-anchor="middle" class="text-desc">Process Mgmt</text>
+
+  <!-- Vertical connectors -->
+  <line x1="140" y1="180" x2="140" y2="260" class="arrow"></line>
+  <line x1="480" y1="180" x2="480" y2="260" class="arrow"></line>
+
+  <!-- Horizontal connector: etcd feeds workflow too -->
+  <line x1="220" y1="290" x2="310" y2="210" stroke="rgba(0,173,216,0.25)" stroke-width="1" stroke-dasharray="3 4"></line>
+
+  <!-- Layer strip (right side, fits within viewBox) -->
+  <!-- Vertical line -->
+  <line x1="640" y1="90" x2="640" y2="400" class="layer-line"></line>
+
+  <!-- Layer 1 -->
+  <circle cx="640" cy="110" r="12" class="layer-circle" opacity="0.4"></circle>
+  <text x="640" y="114" text-anchor="middle" class="layer-num">1</text>
+  <rect x="665" y="95" width="200" height="32" class="layer-box" opacity="0.4"></rect>
+  <text x="678" y="113" class="layer-text">Artifact</text>
+  <text x="750" y="113" class="layer-desc">Does it exist?</text>
+
+  <!-- Layer 2 -->
+  <circle cx="640" cy="185" r="12" class="layer-circle" opacity="0.6"></circle>
+  <text x="640" y="189" text-anchor="middle" class="layer-num">2</text>
+  <rect x="665" y="170" width="200" height="32" class="layer-box" opacity="0.6"></rect>
+  <text x="678" y="188" class="layer-text">Desired</text>
+  <text x="745" y="188" class="layer-desc">What should run?</text>
+
+  <!-- Layer 3 -->
+  <circle cx="640" cy="260" r="12" class="layer-circle" opacity="0.8"></circle>
+  <text x="640" y="264" text-anchor="middle" class="layer-num">3</text>
+  <rect x="665" y="245" width="200" height="32" class="layer-box" opacity="0.8"></rect>
+  <text x="678" y="263" class="layer-text">Installed</text>
+  <text x="750" y="263" class="layer-desc">What is deployed?</text>
+
+  <!-- Layer 4 -->
+  <circle cx="640" cy="335" r="12" class="layer-circle"></circle>
+  <text x="640" y="339" text-anchor="middle" class="layer-num">4</text>
+  <rect x="665" y="320" width="200" height="32" class="layer-box"></rect>
+  <text x="678" y="338" class="layer-text">Runtime</text>
+  <text x="752" y="338" class="layer-desc">Is it healthy?</text>
+
+  <!-- Layer flow arrows -->
+  <line x1="640" y1="122" x2="640" y2="173" class="arrow" style="opacity:0.4"></line>
+  <line x1="640" y1="197" x2="640" y2="248" class="arrow" style="opacity:0.6"></line>
+  <line x1="640" y1="272" x2="640" y2="323" class="arrow" style="opacity:0.8"></line>
+
+</svg>
