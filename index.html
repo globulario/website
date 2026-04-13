@@ -36,6 +36,7 @@
 
   <!-- Hero -->
   <header class="hero">
+    <img src="images/hero-mesh.svg" alt="" class="hero__mesh" aria-hidden="true">
     <div class="hero__inner">
       <div class="hero__mascot">
         <img src="images/puffer.png" alt="Globular Puffer" width="180" height="180">
@@ -71,24 +72,21 @@
         <div class="why__pillars">
           <div class="pillar">
             <div class="pillar__icon">
-              <!-- IMAGE: an eye or magnifying glass icon representing observability -->
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><circle cx="24" cy="24" r="8"/><path d="M4 24s8-14 20-14 20 14 20 14-8 14-20 14S4 24 4 24z"/></svg>
+              <img src="images/icon-observable.svg" alt="" width="64" height="64">
             </div>
             <h3>Observable</h3>
             <p>Every state change, every workflow step, every failure is visible and queryable. No black boxes.</p>
           </div>
           <div class="pillar">
             <div class="pillar__icon">
-              <!-- IMAGE: a flow/workflow icon representing explicit execution -->
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="8" width="12" height="8" rx="2"/><rect x="18" y="20" width="12" height="8" rx="2"/><rect x="32" y="32" width="12" height="8" rx="2"/><path d="M16 12h2l-2 12h4"/><path d="M30 24h2l-2 12h4"/></svg>
+              <img src="images/icon-explicit.svg" alt="" width="64" height="64">
             </div>
             <h3>Explicit</h3>
             <p>No invisible reconciliation loops. Every operation is a formal workflow with classified failure handling.</p>
           </div>
           <div class="pillar">
             <div class="pillar__icon">
-              <!-- IMAGE: a shield or lock icon representing determinism/trust -->
-              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M24 4L6 12v12c0 11 8 18 18 20 10-2 18-9 18-20V12L24 4z"/><path d="M18 24l4 4 8-8"/></svg>
+              <img src="images/icon-deterministic.svg" alt="" width="64" height="64">
             </div>
             <h3>Deterministic</h3>
             <p>The same input always produces the same outcome. Reproducible deployments, predictable convergence.</p>
@@ -264,27 +262,42 @@
       <p class="section__subtitle">A five-part audio introduction. 20 minutes to understand the entire system.</p>
       <div class="talk__grid">
         <a href="/docs/talk/#part-1-why-globular-exists" class="talk-card">
-          <span class="talk-card__number">1</span>
+          <div class="talk-card__header">
+            <span class="talk-card__number">1</span>
+            <img src="images/icon-audio.svg" alt="" class="talk-card__audio" width="24" height="24">
+          </div>
           <h3>Why Globular Exists</h3>
           <p>The origin story &mdash; frustration with opaque systems</p>
         </a>
         <a href="/docs/talk/#part-2-how-globular-works" class="talk-card">
-          <span class="talk-card__number">2</span>
+          <div class="talk-card__header">
+            <span class="talk-card__number">2</span>
+            <img src="images/icon-audio.svg" alt="" class="talk-card__audio" width="24" height="24">
+          </div>
           <h3>How Globular Works</h3>
           <p>The 4-layer state model, workflows, and three actors</p>
         </a>
         <a href="/docs/talk/#part-3-operating-globular" class="talk-card">
-          <span class="talk-card__number">3</span>
+          <div class="talk-card__header">
+            <span class="talk-card__number">3</span>
+            <img src="images/icon-audio.svg" alt="" class="talk-card__audio" width="24" height="24">
+          </div>
           <h3>Operating Globular</h3>
           <p>Day-to-day: deploying, debugging, thinking in state</p>
         </a>
         <a href="/docs/talk/#part-4-when-things-break" class="talk-card">
-          <span class="talk-card__number">4</span>
+          <div class="talk-card__header">
+            <span class="talk-card__number">4</span>
+            <img src="images/icon-audio.svg" alt="" class="talk-card__audio" width="24" height="24">
+          </div>
           <h3>When Things Break</h3>
           <p>Failure handling, drift detection, convergence</p>
         </a>
         <a href="/docs/talk/#part-5-ai--globular" class="talk-card">
-          <span class="talk-card__number">5</span>
+          <div class="talk-card__header">
+            <span class="talk-card__number">5</span>
+            <img src="images/icon-audio.svg" alt="" class="talk-card__audio" width="24" height="24">
+          </div>
           <h3>AI + Globular</h3>
           <p>AI as a constrained operator, not a black box</p>
         </a>
@@ -298,18 +311,22 @@
       <h2 class="section__title">Built For</h2>
       <div class="usecases__grid">
         <div class="usecase">
+          <img src="images/icon-onprem.svg" alt="" class="usecase__icon" width="48" height="48">
           <h3>On-Premises Deployments</h3>
           <p>Full control over your hardware. No cloud dependency. Run on bare metal with systemd.</p>
         </div>
         <div class="usecase">
+          <img src="images/icon-compiled.svg" alt="" class="usecase__icon" width="48" height="48">
           <h3>Compiled Services</h3>
           <p>Go, Rust, C++ binaries that don't need container isolation. Smaller footprint, simpler debugging.</p>
         </div>
         <div class="usecase">
+          <img src="images/icon-edge.svg" alt="" class="usecase__icon" width="48" height="48">
           <h3>Edge Computing</h3>
           <p>Lightweight enough for edge nodes. No container runtime overhead. Native performance.</p>
         </div>
         <div class="usecase">
+          <img src="images/icon-appliance.svg" alt="" class="usecase__icon" width="48" height="48">
           <h3>Appliance-Style Products</h3>
           <p>Ship a self-managing cluster. Your customers get a product, not infrastructure homework.</p>
         </div>

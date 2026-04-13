@@ -220,6 +220,19 @@ h1, h2, h3, h4 {
   position: relative;
 }
 
+/* Hero Mesh Background */
+.hero__mesh {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
 /* Hero Mascot */
 .hero__mascot {
   margin-bottom: 2rem;
@@ -353,9 +366,12 @@ h1, h2, h3, h4 {
 
 .pillar__icon {
   flex-shrink: 0;
-  color: var(--teal);
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
+}
+.pillar__icon img {
+  width: 64px;
+  height: 64px;
 }
 
 .pillar h3 {
@@ -552,6 +568,21 @@ h1, h2, h3, h4 {
   color: inherit;
 }
 
+.talk-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.talk-card__audio {
+  opacity: 0.4;
+  transition: opacity 0.2s;
+}
+.talk-card:hover .talk-card__audio {
+  opacity: 0.8;
+}
+
 .talk-card__number {
   display: flex;
   align-items: center;
@@ -563,7 +594,6 @@ h1, h2, h3, h4 {
   border-radius: 50%;
   font-weight: 700;
   font-size: 0.95rem;
-  margin-bottom: 1rem;
 }
 
 .talk-card h3 {
@@ -592,6 +622,11 @@ h1, h2, h3, h4 {
 }
 .usecase:hover {
   border-color: rgba(0, 173, 216, 0.3);
+}
+
+.usecase__icon {
+  margin-bottom: 1.2rem;
+  opacity: 0.85;
 }
 
 .usecase h3 {
