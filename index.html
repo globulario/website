@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Globular — Infrastructure You Can Understand</title>
+  <meta name="description" content="An open-source platform for deploying and operating distributed systems. Explicit workflows, deterministic state, native binaries. No containers, no magic.">
+  <link rel="icon" href="images/puffer.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">
+        <img src="images/puffer.png" alt="Globular" width="32" height="32">
+        <span>Globular</span>
+      </a>
+      <button class="nav__toggle" aria-label="Toggle menu" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#why">Why Globular</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#comparison">Compare</a></li>
+        <li><a href="#talk">The Talk</a></li>
+        <li><a href="/docs/" class="nav__btn">Documentation</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero__inner">
+      <div class="hero__mascot">
+        <img src="images/puffer.png" alt="Globular Puffer" width="180" height="180">
+      </div>
+      <h1 class="hero__title">Infrastructure You Can<br><span class="hero__accent">Understand</span></h1>
+      <p class="hero__subtitle">An open-source platform for deploying and operating distributed systems.<br>Explicit workflows. Deterministic state. Native binaries. No containers, no magic.</p>
+      <div class="hero__actions">
+        <a href="/docs/getting-started/" class="btn btn--primary">Get Started</a>
+        <a href="https://github.com/globulario/services" class="btn btn--secondary" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </div>
+      <div class="hero__visual">
+        <!-- Placeholder: hero diagram showing the 3-actor architecture -->
+        <div class="hero__diagram">
+          <div class="diagram__node diagram__node--controller">
+            <div class="diagram__icon">&#9881;</div>
+            <div class="diagram__label">Controller</div>
+            <div class="diagram__desc">Decides</div>
+          </div>
+          <div class="diagram__arrows">
+            <div class="diagram__arrow diagram__arrow--right">&rarr;</div>
+            <div class="diagram__arrow diagram__arrow--left">&larr;</div>
+          </div>
+          <div class="diagram__node diagram__node--workflow">
+            <div class="diagram__icon">&#9654;</div>
+            <div class="diagram__label">Workflows</div>
+            <div class="diagram__desc">Coordinates</div>
+          </div>
+          <div class="diagram__arrows">
+            <div class="diagram__arrow diagram__arrow--right">&rarr;</div>
+            <div class="diagram__arrow diagram__arrow--left">&larr;</div>
+          </div>
+          <div class="diagram__node diagram__node--agent">
+            <div class="diagram__icon">&#9641;</div>
+            <div class="diagram__label">Node Agents</div>
+            <div class="diagram__desc">Executes</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Why Globular -->
+  <section class="section section--why" id="why">
+    <div class="section__inner">
+      <h2 class="section__title">Why Globular?</h2>
+      <div class="why__grid">
+        <div class="why__text">
+          <blockquote class="why__quote">
+            &ldquo;Globular did not start as a product. It started as frustration. Frustration with systems that are powerful, but hard to reason about.&rdquo;
+          </blockquote>
+          <p>Modern infrastructure hides complexity behind layers of abstraction. When things go wrong, you dig through scattered logs, guess at invisible controller behavior, and hope the system eventually converges.</p>
+          <p>Globular takes a different approach: <strong>expose complexity, organize it, and make it predictable.</strong> Every change is traceable. Every failure is explained. Every action flows through an explicit workflow.</p>
+          <p>The result? A system you can actually understand. And once you understand your system, you can trust it.</p>
+        </div>
+        <div class="why__pillars">
+          <div class="pillar">
+            <div class="pillar__icon">
+              <!-- IMAGE: an eye or magnifying glass icon representing observability -->
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><circle cx="24" cy="24" r="8"/><path d="M4 24s8-14 20-14 20 14 20 14-8 14-20 14S4 24 4 24z"/></svg>
+            </div>
+            <h3>Observable</h3>
+            <p>Every state change, every workflow step, every failure is visible and queryable. No black boxes.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar__icon">
+              <!-- IMAGE: a flow/workflow icon representing explicit execution -->
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="8" width="12" height="8" rx="2"/><rect x="18" y="20" width="12" height="8" rx="2"/><rect x="32" y="32" width="12" height="8" rx="2"/><path d="M16 12h2l-2 12h4"/><path d="M30 24h2l-2 12h4"/></svg>
+            </div>
+            <h3>Explicit</h3>
+            <p>No invisible reconciliation loops. Every operation is a formal workflow with classified failure handling.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar__icon">
+              <!-- IMAGE: a shield or lock icon representing determinism/trust -->
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M24 4L6 12v12c0 11 8 18 18 20 10-2 18-9 18-20V12L24 4z"/><path d="M18 24l4 4 8-8"/></svg>
+            </div>
+            <h3>Deterministic</h3>
+            <p>The same input always produces the same outcome. Reproducible deployments, predictable convergence.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section section--features" id="features">
+    <div class="section__inner">
+      <h2 class="section__title">Built Different</h2>
+      <p class="section__subtitle">Not another Kubernetes. A fundamentally different approach to distributed systems.</p>
+      <div class="features__grid">
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="14" height="10" rx="2"/><rect x="22" y="4" width="14" height="10" rx="2"/><rect x="4" y="26" width="14" height="10" rx="2"/><rect x="22" y="26" width="14" height="10" rx="2"/><path d="M11 14v4m0 4v4M29 14v4m0 4v4" stroke-dasharray="2 2"/></svg>
+          </div>
+          <h3>Four-Layer State Model</h3>
+          <p>Artifact &rarr; Desired &rarr; Installed &rarr; Runtime. Four independent layers, each with its own owner. Never confuse &ldquo;should be running&rdquo; with &ldquo;is running.&rdquo;</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="20" r="4"/><circle cx="20" cy="20" r="4"/><circle cx="32" cy="20" r="4"/><path d="M12 20h4m4 0h4"/><path d="M20 8v8m0 8v8" stroke-dasharray="2 2"/></svg>
+          </div>
+          <h3>Workflow-Driven</h3>
+          <p>Every cluster mutation flows through a recorded workflow. Each step has an actor, action, and classified result. Full audit trail, automatic retries with backoff.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="6" width="28" height="28" rx="3"/><path d="M6 14h28M14 14v20"/><text x="24" y="28" font-size="10" fill="currentColor" stroke="none" font-family="monospace">&gt;_</text></svg>
+          </div>
+          <h3>Native Binaries</h3>
+          <p>No containers, no image registries, no overlay networks. Statically-linked Go binaries running under systemd. Debug with standard Linux tools.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 4v8m0 16v8M4 20h8m16 0h8"/><circle cx="20" cy="20" r="6"/><path d="M14 14l4 4m4 4l4 4M26 14l-4 4m-4 4l-4 4"/></svg>
+          </div>
+          <h3>etcd Source of Truth</h3>
+          <p>All configuration, endpoints, desired state, and cluster membership in one place. No env vars, no config files, no hidden state. Query everything.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="20" cy="14" r="6"/><path d="M8 34c0-6.627 5.373-12 12-12s12 5.373 12 12"/><path d="M28 10l4-4m0 0l4 4m-4-4v8"/></svg>
+          </div>
+          <h3>AI-Ready Architecture</h3>
+          <p>Because everything is explicit and observable, AI can reason about your system, not guess from logs. Built-in AI services for diagnosis, remediation, and learning.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 4l16 8v12c0 9-7 15-16 16C11 39 4 33 4 24V12l16-8z"/><path d="M12 20l5 5 11-11"/></svg>
+          </div>
+          <h3>Secure by Default</h3>
+          <p>mTLS between all components. JWT + RBAC with per-resource permissions. Ed25519 signatures. No token storage in etcd. Everything goes through the interceptor chain.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="section section--how" id="how-it-works">
+    <div class="section__inner">
+      <h2 class="section__title">How It Works</h2>
+      <p class="section__subtitle">Three actors, four layers, one source of truth.</p>
+
+      <div class="layers">
+        <div class="layer">
+          <div class="layer__number">1</div>
+          <div class="layer__content">
+            <h3>Repository <span class="layer__tag">Artifact</span></h3>
+            <p>&ldquo;Does this version exist?&rdquo; &mdash; Packages are built, signed, and published to the repository. Versioned and immutable.</p>
+          </div>
+        </div>
+        <div class="layer__connector"></div>
+        <div class="layer">
+          <div class="layer__number">2</div>
+          <div class="layer__content">
+            <h3>Desired State <span class="layer__tag">Controller</span></h3>
+            <p>&ldquo;What should be running?&rdquo; &mdash; The cluster controller writes desired state to etcd. This is the declaration of intent.</p>
+          </div>
+        </div>
+        <div class="layer__connector"></div>
+        <div class="layer">
+          <div class="layer__number">3</div>
+          <div class="layer__content">
+            <h3>Installed <span class="layer__tag">Node Agent</span></h3>
+            <p>&ldquo;What is actually deployed?&rdquo; &mdash; Node agents report what they have installed. Drift between desired and installed triggers convergence.</p>
+          </div>
+        </div>
+        <div class="layer__connector"></div>
+        <div class="layer">
+          <div class="layer__number">4</div>
+          <div class="layer__content">
+            <h3>Runtime Health <span class="layer__tag">systemd</span></h3>
+            <p>&ldquo;Is it running and healthy?&rdquo; &mdash; Real-time health checks, metrics, and liveness probes. The ground truth.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="how__cta">
+        <a href="/docs/operators/architecture-overview/" class="btn btn--outline">Read the Architecture Guide</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison -->
+  <section class="section section--compare" id="comparison">
+    <div class="section__inner">
+      <h2 class="section__title">Globular vs. Kubernetes</h2>
+      <p class="section__subtitle">Different problems, different philosophy. Globular is not a Kubernetes replacement &mdash; it's an alternative for teams that don't need containers.</p>
+      <div class="table-wrap">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Aspect</th>
+              <th>Kubernetes</th>
+              <th class="compare-table__highlight">Globular</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Unit of deployment</td>
+              <td>Container image</td>
+              <td>Native binary (statically linked)</td>
+            </tr>
+            <tr>
+              <td>Process supervisor</td>
+              <td>kubelet + container runtime</td>
+              <td>systemd</td>
+            </tr>
+            <tr>
+              <td>Reconciliation</td>
+              <td>Invisible control loops</td>
+              <td>Explicit workflows with audit trail</td>
+            </tr>
+            <tr>
+              <td>Failure diagnosis</td>
+              <td>Scattered across events, logs, conditions</td>
+              <td>Unified workflow history, classified failures</td>
+            </tr>
+            <tr>
+              <td>Configuration</td>
+              <td>ConfigMaps, Secrets, env vars</td>
+              <td>etcd only (single source of truth)</td>
+            </tr>
+            <tr>
+              <td>Scheduling</td>
+              <td>Pod scheduler</td>
+              <td>Profile-based assignment (explicit)</td>
+            </tr>
+            <tr>
+              <td>Minimum footprint</td>
+              <td>Control plane + container runtime</td>
+              <td>Single binary + etcd + systemd</td>
+            </tr>
+            <tr>
+              <td>AI integration</td>
+              <td>External log/metric analysis</td>
+              <td>Built-in: state is explicit, AI reasons natively</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Talk -->
+  <section class="section section--talk" id="talk">
+    <div class="section__inner">
+      <h2 class="section__title">The Globular Talk</h2>
+      <p class="section__subtitle">A five-part audio introduction. 20 minutes to understand the entire system.</p>
+      <div class="talk__grid">
+        <a href="/docs/talk/#part-1-why-globular-exists" class="talk-card">
+          <span class="talk-card__number">1</span>
+          <h3>Why Globular Exists</h3>
+          <p>The origin story &mdash; frustration with opaque systems</p>
+        </a>
+        <a href="/docs/talk/#part-2-how-globular-works" class="talk-card">
+          <span class="talk-card__number">2</span>
+          <h3>How Globular Works</h3>
+          <p>The 4-layer state model, workflows, and three actors</p>
+        </a>
+        <a href="/docs/talk/#part-3-operating-globular" class="talk-card">
+          <span class="talk-card__number">3</span>
+          <h3>Operating Globular</h3>
+          <p>Day-to-day: deploying, debugging, thinking in state</p>
+        </a>
+        <a href="/docs/talk/#part-4-when-things-break" class="talk-card">
+          <span class="talk-card__number">4</span>
+          <h3>When Things Break</h3>
+          <p>Failure handling, drift detection, convergence</p>
+        </a>
+        <a href="/docs/talk/#part-5-ai--globular" class="talk-card">
+          <span class="talk-card__number">5</span>
+          <h3>AI + Globular</h3>
+          <p>AI as a constrained operator, not a black box</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Best For -->
+  <section class="section section--usecases" id="usecases">
+    <div class="section__inner">
+      <h2 class="section__title">Built For</h2>
+      <div class="usecases__grid">
+        <div class="usecase">
+          <h3>On-Premises Deployments</h3>
+          <p>Full control over your hardware. No cloud dependency. Run on bare metal with systemd.</p>
+        </div>
+        <div class="usecase">
+          <h3>Compiled Services</h3>
+          <p>Go, Rust, C++ binaries that don't need container isolation. Smaller footprint, simpler debugging.</p>
+        </div>
+        <div class="usecase">
+          <h3>Edge Computing</h3>
+          <p>Lightweight enough for edge nodes. No container runtime overhead. Native performance.</p>
+        </div>
+        <div class="usecase">
+          <h3>Appliance-Style Products</h3>
+          <p>Ship a self-managing cluster. Your customers get a product, not infrastructure homework.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Get Started CTA -->
+  <section class="section section--cta">
+    <div class="section__inner">
+      <h2>Ready to Try?</h2>
+      <p>From zero to a running cluster in 15 minutes. One machine, one command.</p>
+      <div class="cta__code">
+        <code>curl -fsSL https://globular.io/install.sh | bash<br>globular cluster bootstrap</code>
+      </div>
+      <div class="cta__actions">
+        <a href="/docs/getting-started/" class="btn btn--primary btn--lg">Get Started Guide</a>
+        <a href="/docs/" class="btn btn--outline btn--lg">Full Documentation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <img src="images/puffer.png" alt="Globular" width="28" height="28">
+        <span>Globular</span>
+      </div>
+      <div class="footer__links">
+        <div class="footer__col">
+          <h4>Project</h4>
+          <a href="/docs/">Documentation</a>
+          <a href="/docs/getting-started/">Getting Started</a>
+          <a href="/docs/talk/">The Talk</a>
+        </div>
+        <div class="footer__col">
+          <h4>Community</h4>
+          <a href="https://github.com/globulario/services" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://github.com/globulario/services/issues" target="_blank" rel="noopener">Issues</a>
+        </div>
+        <div class="footer__col">
+          <h4>Operators</h4>
+          <a href="/docs/operators/architecture-overview/">Architecture</a>
+          <a href="/docs/operators/installation/">Installation</a>
+          <a href="/docs/operators/ports-reference/">Ports Reference</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2024&ndash;2026 Globular Project. Open source under the Apache 2.0 License.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
